@@ -1,0 +1,80 @@
+@use "../_utils/styles/colors" as *;
+@use "../_utils/styles/utils" as *;
+
+.AboutPage {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  @include tablet {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content {
+    &__left {
+      position: relative;
+      flex: 1;
+    }
+
+    &__right {
+      position: relative;
+      flex: 1;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: defaultUnit(20);
+    padding: defaultUnit(20) defaultUnit(40);
+    font-size: defaultUnit(36);
+
+    @include mobile {
+      font-size: defaultUnit(22);
+    }
+  }
+
+  &__additional {
+    position: absolute;
+    top: defaultUnit(20);
+    padding: defaultUnit(20) defaultUnit(40);
+    font-size: defaultUnit(18);
+    max-width: defaultUnit(550);
+
+    &__title {
+      font-size: defaultUnit(26);
+      margin-bottom: defaultUnit(20);
+
+      @include mobile {
+        font-size: defaultUnit(22);
+      }
+    }
+
+    &__text {
+      font-size: defaultUnit(22);
+      margin-bottom: defaultUnit(10);
+
+      @include mobile {
+        font-size: defaultUnit(18);
+      }
+    }
+  }
+
+  &__imageLeft {
+    height: 100%;
+
+    @include tablet {
+      height: fit-content;
+      max-height: 400px;
+    }
+  }
+
+  &__imageRight {
+    height: 100%;
+
+    @include tablet {
+      height: 850px;
+      max-height: 100%;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../_utils/styles/utils.scss" as *;
+@use "../_utils/styles/colors.scss" as *;
+
+.ServicesPage {
+  display: flex;
+  justify-content: center;
+  padding: defaultUnit(100) defaultUnit(0);
+  position: relative;
+
+  &__content {
+    display: flex;
+    gap: defaultUnit(30);
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: defaultUnit(30);
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,8 @@
+@use "./_utils/styles/utils.scss" as *;
+@use "./_utils/styles/colors.scss" as *;
+
+.Home {
+  &__wrapper {
+    max-width: defaultUnit(1100);
+  }
+}

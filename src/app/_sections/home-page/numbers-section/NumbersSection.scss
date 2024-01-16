@@ -1,0 +1,49 @@
+@use "../../../_utils/styles/utils" as *;
+@use "../../../_utils/styles/colors" as *;
+
+.NumbersSection {
+  position: relative;
+  color: var(--green-300);
+
+  &__wrapper {
+    max-width: defaultUnit(800);
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: defaultUnit(32);
+    text-align: center;
+    padding: defaultUnit(40) defaultUnit(0);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: defaultUnit(40);
+    padding: defaultUnit(60) defaultUnit(0);
+    font-size: defaultUnit(26);
+
+    @include mobile {
+      flex-direction: column;
+      font-size: defaultUnit(18);
+      padding-left: defaultUnit(20);
+    }
+  }
+
+  &__sponsors {
+    display: flex;
+    gap: defaultUnit(20);
+    padding: defaultUnit(40) defaultUnit(0);
+
+    &__img {
+      width: defaultUnit(120);
+      height: auto;
+      object-fit: contain;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      padding-left: defaultUnit(20);
+    }
+  }
+}

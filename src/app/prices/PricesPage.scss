@@ -1,0 +1,10 @@
+@use "../_utils/styles/colors" as *;
+@use "../_utils/styles/utils" as *;
+
+.PricesPage {
+  height: 80vh;
+
+  @include mobile {
+    height: 100%;
+  }
+}

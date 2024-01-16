@@ -1,0 +1,40 @@
+@use "../../_utils/styles/colors.scss" as *;
+@use "../../_utils/styles/utils" as *;
+
+.Button {
+  color: var(--white-100);
+  background-color: var(--green-300);
+  border: defaultUnit(1) solid var(--green-300);
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--white-100);
+    color: var(--green-300);
+    transition: 0.3s ease-in-out;
+  }
+
+  &--small {
+    width: defaultUnit(100);
+    padding: defaultUnit(10);
+    font-size: defaultUnit(12);
+  }
+
+  &--medium {
+    width: defaultUnit(120);
+    padding: defaultUnit(10);
+    font-size: defaultUnit(12);
+  }
+
+  &--large {
+    padding: defaultUnit(20) defaultUnit(40);
+    width: defaultUnit(400);
+    font-size: defaultUnit(16);
+
+    @include mobile {
+      width: defaultUnit(200);
+      padding: defaultUnit(10) defaultUnit(20);
+      font-size: defaultUnit(12);
+    }
+  }
+}

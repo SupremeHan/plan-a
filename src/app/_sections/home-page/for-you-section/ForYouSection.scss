@@ -1,0 +1,60 @@
+@use "../../../_utils/styles/utils" as *;
+@use "../../../_utils/styles/colors" as *;
+
+.ForYouSection {
+  position: relative;
+  text-align: center;
+  padding: defaultUnit(40);
+
+  &__content {
+    max-width: defaultUnit(500);
+    height: defaultUnit(600);
+    margin: defaultUnit(60) auto;
+    color: var(--white-100);
+    background: var(--teal-100);
+    padding: defaultUnit(20) defaultUnit(40);
+    border-radius: defaultUnit(7);
+
+    @include mobile {
+      height: defaultUnit(400);
+    }
+  }
+
+  &__title {
+    font-size: defaultUnit(40);
+    margin-top: defaultUnit(60);
+    margin-bottom: defaultUnit(40);
+
+    @include mobile {
+      font-size: defaultUnit(26);
+      margin: defaultUnit(20) defaultUnit(0);
+    }
+  }
+
+  &__description {
+    font-size: defaultUnit(22);
+    margin: defaultUnit(40) defaultUnit(0);
+
+    @include mobile {
+      font-size: defaultUnit(16);
+      margin: defaultUnit(20) defaultUnit(0);
+    }
+  }
+
+  &__btn {
+    padding: defaultUnit(10) defaultUnit(25);
+    width: defaultUnit(150);
+    background-color: var(--green-300);
+    border: defaultUnit(1) solid transparent;
+    color: var(--white-100);
+    font-size: defaultUnit(16);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--green-300);
+      background-color: white;
+      transition: 0.3s ease-in-out;
+      border: defaultUnit(1) solid var(--green-300);
+    }
+  }
+}

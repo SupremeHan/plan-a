@@ -1,0 +1,9 @@
+@use "../../../_utils/styles/utils" as *;
+@use "../../../_utils/styles/colors" as *;
+
+.MapSection {
+  &__title {
+    text-align: center;
+    padding: defaultUnit(30) defaultUnit(0);
+  }
+}

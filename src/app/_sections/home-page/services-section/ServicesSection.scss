@@ -1,0 +1,74 @@
+@use "../../../_utils/styles/utils" as *;
+@use "../../../_utils/styles/colors" as *;
+
+.ServicesSection {
+  position: relative;
+  text-align: center;
+
+  &__title {
+    color: var(--white-100);
+    font-size: defaultUnit(40);
+    padding: defaultUnit(40) defaultUnit(0);
+
+    @include mobile {
+      font-size: defaultUnit(26);
+    }
+  }
+
+  &__desc {
+    color: var(--white-100);
+    font-size: defaultUnit(22);
+    max-width: defaultUnit(800);
+    margin: 0 auto;
+
+    @include mobile {
+      font-size: defaultUnit(16);
+      padding: defaultUnit(10);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: defaultUnit(40);
+    padding: defaultUnit(40) defaultUnit(0);
+    max-width: defaultUnit(1100);
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-100);
+    font-size: defaultUnit(26);
+    text-align: center;
+
+    &:hover {
+      color: var(--white-100);
+    }
+  }
+
+  &__img {
+    width: defaultUnit(400);
+    height: defaultUnit(400);
+    object-fit: cover;
+    transition: filter 0.4s ease-in;
+
+    &:hover {
+      filter: brightness(70%);
+      cursor: pointer;
+    }
+
+    @include mobile {
+      width: defaultUnit(300);
+      height: defaultUnit(300);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@function defaultUnit($px) {
+  @return #{math.div($px, 16)}rem;
+}
+
+$mobile-start: 768px;
+$mobile-portrait-start: 600px;
+$tablet-start: 1200px;
+
+@mixin mobilePortraitOnly {
+  @media all and (max-width: $mobile-portrait-start) and (orientation: "portrait") {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media all and (max-width: $mobile-start) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (max-width: $tablet-start) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-height: 500px) and (max-height: 800px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: $tablet-start) {
+    @content;
+  }
+}

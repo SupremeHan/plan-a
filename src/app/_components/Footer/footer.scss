@@ -1,0 +1,21 @@
+@use "../../_utils/styles/colors.scss" as *;
+@use "../../_utils/styles/utils.scss" as *;
+
+.Footer {
+  display: flex;
+  align-items: center;
+  padding: defaultUnit(10) defaultUnit(30);
+  background-color: var(--teal-100);
+  color: var(--white-100);
+  height: defaultUnit(150);
+
+  &__content {
+    max-width: defaultUnit(1100);
+    margin: 0 auto;
+    text-align: center;
+
+    @include mobile {
+      font-size: defaultUnit(12);
+    }
+  }
+}
