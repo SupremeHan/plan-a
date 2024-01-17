@@ -1,58 +1,58 @@
-@use "../../../_utils/styles/utils" as *;
-@use "../../../_utils/styles/colors" as *;
+@use '../../../_utils/styles/utils' as *;
+@use '../../../_utils/styles/colors' as *;
 
 .LandingSection {
-  position: relative;
-  height: calc(100vh - 100px);
+	position: relative;
+	height: calc(100vh - 100px);
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    max-width: defaultUnit(1200);
-    width: 100%;
-    padding-top: defaultUnit(150);
-    margin: 0 auto;
-    color: var(--white-100);
-    padding-left: defaultUnit(20);
-    padding-right: defaultUnit(20);
+	&__container {
+		display: flex;
+		flex-direction: column;
+		max-width: defaultUnit(1200);
+		width: 100%;
+		padding-top: defaultUnit(150);
+		margin: 0 auto;
+		color: var(--white-100);
+		padding-left: defaultUnit(20);
+		padding-right: defaultUnit(20);
 
-    @include mobile {
-      padding-top: defaultUnit(50);
-    }
-  }
+		@include mobile {
+			padding-top: defaultUnit(120);
+		}
+	}
 
-  &__title {
-    font-size: defaultUnit(48);
-    margin-bottom: defaultUnit(30);
+	&__title {
+		font-size: defaultUnit(48);
+		margin-bottom: defaultUnit(30);
 
-    @include mobile {
-      font-size: defaultUnit(32);
-    }
-  }
+		@include mobile {
+			font-size: defaultUnit(32);
+		}
+	}
 
-  &__subTitle {
-    font-size: defaultUnit(36);
-    margin-bottom: defaultUnit(30);
+	&__subTitle {
+		font-size: defaultUnit(36);
+		margin-bottom: defaultUnit(30);
 
-    @include mobile {
-      font-size: defaultUnit(26);
-    }
-  }
+		@include mobile {
+			font-size: defaultUnit(26);
+		}
+	}
 
-  &__text {
-    font-size: defaultUnit(18);
-    max-width: defaultUnit(400);
+	&__text {
+		font-size: defaultUnit(18);
+		max-width: defaultUnit(400);
 
-    @include mobile {
-      font-size: defaultUnit(16);
-    }
-  }
+		@include mobile {
+			font-size: defaultUnit(16);
+		}
+	}
 
-  &__btn {
-    margin-top: defaultUnit(30);
-  }
+	&__btn {
+		margin-top: defaultUnit(30);
+	}
 
-  &__image {
-    filter: brightness(50%);
-  }
+	&__image {
+		filter: brightness(50%);
+	}
 }

@@ -1,61 +1,61 @@
-@use "../../_utils/styles/colors.scss" as *;
-@use "../../_utils/styles/utils" as *;
+@use '../../_utils/styles/colors.scss' as *;
+@use '../../_utils/styles/utils' as *;
 
 .Card {
-  width: defaultUnit(300);
-  height: defaultUnit(500);
-  background: var(--white-100);
-  padding: defaultUnit(20);
-  display: flex;
-  flex-direction: column;
+	width: defaultUnit(300);
+	height: defaultUnit(500);
+	color: var(--white-100);
+	padding: defaultUnit(20);
+	display: flex;
+	flex-direction: column;
 
-  @include mobile {
-    width: defaultUnit(300);
-    height: defaultUnit(400);
-  }
+	@include mobile {
+		width: defaultUnit(300);
+		height: defaultUnit(400);
+	}
 
-  &__number {
-    text-align: center;
-    font-size: defaultUnit(50);
-    background-color: var(--green-200);
-    color: var(--white-100);
-    width: defaultUnit(50);
-    align-self: center;
-    margin-top: defaultUnit(-30);
-    margin-bottom: defaultUnit(30);
-  }
+	&__number {
+		text-align: center;
+		font-size: defaultUnit(50);
+		background-color: var(--green-200);
+		color: var(--white-100);
+		width: defaultUnit(50);
+		align-self: center;
+		margin-top: defaultUnit(-30);
+		margin-bottom: defaultUnit(30);
+	}
 
-  &__icon {
-    align-self: center;
-    margin-bottom: defaultUnit(30);
+	&__icon {
+		align-self: center;
+		margin-bottom: defaultUnit(30);
 
-    @include mobile {
-      margin-bottom: defaultUnit(10);
-    }
-  }
+		@include mobile {
+			margin-bottom: defaultUnit(10);
+		}
+	}
 
-  &__title {
-    text-align: center;
-    font-size: defaultUnit(32);
-    margin-bottom: defaultUnit(30);
+	&__title {
+		text-align: center;
+		font-size: defaultUnit(32);
+		margin-bottom: defaultUnit(30);
 
-    @include mobile {
-      font-size: defaultUnit(26);
-    }
-  }
+		@include mobile {
+			font-size: defaultUnit(26);
+		}
+	}
 
-  &__desc {
-    font-size: defaultUnit(16);
-    font-weight: 300;
-    margin-bottom: defaultUnit(20);
-    text-align: center;
+	&__desc {
+		font-size: defaultUnit(16);
+		font-weight: 300;
+		margin-bottom: defaultUnit(20);
+		text-align: center;
 
-    @include mobile {
-      font-size: defaultUnit(14);
-    }
-  }
+		@include mobile {
+			font-size: defaultUnit(14);
+		}
+	}
 
-  &__btn {
-    align-self: center;
-  }
+	&__btn {
+		align-self: center;
+	}
 }
