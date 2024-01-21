@@ -1,40 +1,40 @@
-@use "../../_utils/styles/colors.scss" as *;
-@use "../../_utils/styles/utils.scss" as *;
+@use '../../_utils/styles/colors.scss' as *;
+@use '../../_utils/styles/utils.scss' as *;
 
 .ServicesCard {
-  position: relative;
-  width: defaultUnit(448);
+	position: relative;
+	width: defaultUnit(448);
 
-  @include mobile {
-    max-width: defaultUnit(370);
-    width: fit-content;
-  }
+	@include mobile {
+		max-width: defaultUnit(370);
+		width: 100%;
+	}
 
-  &__image {
-    filter: brightness(60%);
-  }
+	&__image {
+		filter: brightness(60%);
+	}
 
-  &__title {
-    position: absolute;
-    top: defaultUnit(20);
-    left: defaultUnit(20);
-    color: var(--white-100);
-    font-size: defaultUnit(28);
-    font-weight: 500;
-  }
+	&__title {
+		position: absolute;
+		top: defaultUnit(20);
+		left: defaultUnit(20);
+		color: var(--white-100);
+		font-size: defaultUnit(28);
+		font-weight: 500;
+	}
 
-  &__text {
-    position: absolute;
-    top: defaultUnit(100);
-    left: defaultUnit(20);
-    color: var(--white-100);
-    font-size: defaultUnit(20);
-    font-weight: 300;
-  }
+	&__text {
+		position: absolute;
+		top: defaultUnit(100);
+		left: defaultUnit(20);
+		color: var(--white-100);
+		font-size: defaultUnit(20);
+		font-weight: 300;
+	}
 
-  &__btn {
-    position: absolute;
-    bottom: defaultUnit(50);
-    right: defaultUnit(30);
-  }
+	&__btn {
+		position: absolute;
+		bottom: defaultUnit(50);
+		right: defaultUnit(30);
+	}
 }
