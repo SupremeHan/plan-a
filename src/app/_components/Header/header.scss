@@ -1,110 +1,112 @@
-@use "../../_utils/styles/colors.scss" as *;
-@use "../../_utils/styles/utils.scss" as *;
+@use '../../_utils/styles/colors.scss' as *;
+@use '../../_utils/styles/utils.scss' as *;
 
 .Navbar {
-  height: defaultUnit(100);
-  background-color: var(--teal-100);
-  position: relative;
+	height: defaultUnit(100);
+	background-color: var(--teal-100);
+	position: sticky;
+	top: 0;
+	z-index: 999;
 
-  &__container {
-    max-width: defaultUnit(1200);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: defaultUnit(0) defaultUnit(20);
+	&__container {
+		max-width: defaultUnit(1200);
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		padding: defaultUnit(0) defaultUnit(20);
 
-    &__menu__icon {
-      display: none;
+		&__menu__icon {
+			display: none;
 
-      @include tablet {
-        display: block;
-        cursor: pointer;
-        color: var(--white-100);
-        transition: 0.8s ease-in-out;
+			@include tablet {
+				display: block;
+				cursor: pointer;
+				color: var(--white-100);
+				transition: 0.8s ease-in-out;
 
-        svg {
-          font-size: defaultUnit(36);
-        }
-      }
-    }
+				svg {
+					font-size: defaultUnit(36);
+				}
+			}
+		}
 
-    &__elements {
-      @include tablet {
-        position: absolute;
-        right: 0;
-        top: defaultUnit(90);
-        background-color: var(--teal-100);
-        width: defaultUnit(0);
-        height: calc(100vh - defaultUnit(60));
-        transition: all 0.3s ease-in-out;
-        overflow: hidden;
-        z-index: 100;
+		&__elements {
+			@include tablet {
+				position: absolute;
+				right: 0;
+				top: defaultUnit(90);
+				background-color: var(--teal-100);
+				width: defaultUnit(0);
+				height: calc(100dvh - defaultUnit(60));
+				transition: all 0.3s ease-in-out;
+				overflow: hidden;
+				z-index: 100;
 
-        &--active {
-          width: 100%;
-        }
-      }
+				&--active {
+					width: 100%;
+				}
+			}
 
-      ul {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
+			ul {
+				display: flex;
+				justify-content: space-between;
+				list-style-type: none;
 
-        @include tablet {
-          flex-direction: column;
-          align-items: center;
-          margin-top: defaultUnit(20);
-          gap: defaultUnit(20);
-        }
+				@include tablet {
+					flex-direction: column;
+					align-items: center;
+					margin-top: defaultUnit(20);
+					gap: defaultUnit(20);
+				}
 
-        li {
-          @include tablet {
-            margin-right: unset;
-            margin-top: defaultUnit(22);
-          }
-        }
+				li {
+					@include tablet {
+						margin-right: unset;
+						margin-top: defaultUnit(22);
+					}
+				}
 
-        li:not(:last-child) {
-          margin-right: defaultUnit(60);
+				li:not(:last-child) {
+					margin-right: defaultUnit(60);
 
-          @include tablet {
-            margin-right: defaultUnit(0);
-          }
-        }
+					@include tablet {
+						margin-right: defaultUnit(0);
+					}
+				}
 
-        a {
-          font-size: defaultUnit(16);
-          font-weight: 400;
-          color: var(--white-100);
-          text-decoration: none;
-          position: relative;
-          padding: 10px 0px;
-          transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-          cursor: pointer;
+				a {
+					font-size: defaultUnit(16);
+					font-weight: 400;
+					color: var(--white-100);
+					text-decoration: none;
+					position: relative;
+					padding: 10px 0px;
+					transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+					cursor: pointer;
 
-          @include tablet {
-            font-size: defaultUnit(22);
-          }
+					@include tablet {
+						font-size: defaultUnit(22);
+					}
 
-          &:after {
-            content: "";
-            position: absolute;
-            width: 0%;
-            height: 1px;
-            display: block;
-            transition: all 0.3s ease;
-            bottom: 1%;
-          }
+					&:after {
+						content: '';
+						position: absolute;
+						width: 0%;
+						height: 1px;
+						display: block;
+						transition: all 0.3s ease;
+						bottom: 1%;
+					}
 
-          &:hover::after {
-            width: 100%;
-            height: 1px;
-            background-color: #fff;
-          }
-        }
-      }
-    }
-  }
+					&:hover::after {
+						width: 100%;
+						height: 1px;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
 }
