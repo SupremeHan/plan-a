@@ -1,52 +1,56 @@
-@use "../_utils/styles/colors" as *;
-@use "../_utils/styles/utils" as *;
+@use '../_utils/styles/colors' as *;
+@use '../_utils/styles/utils' as *;
 
 .AdvicePage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: defaultUnit(20);
-  padding-bottom: defaultUnit(100);
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: defaultUnit(20);
+	padding-bottom: defaultUnit(100);
+	position: relative;
 
-  &__image {
-    filter: brightness(70%);
-  }
+	&__image {
+		filter: brightness(70%);
+	}
 
-  &__title {
-    font-size: defaultUnit(56);
-    color: var(--green-300);
-    margin-top: defaultUnit(50);
-    margin-bottom: defaultUnit(20);
-  }
+	&__title {
+		font-size: defaultUnit(56);
+		color: var(--green-300);
+		margin-top: defaultUnit(50);
+		margin-bottom: defaultUnit(20);
 
-  &__subTitle {
-    font-size: defaultUnit(20);
-    color: var(--white-100);
-    font-weight: 300;
+		@include mobile {
+			font-size: defaultUnit(40);
+		}
+	}
 
-    @include mobile {
-      text-align: center;
-    }
-  }
+	&__subTitle {
+		font-size: defaultUnit(20);
+		color: var(--white-100);
+		font-weight: 300;
 
-  &__content {
-    display: flex;
-    justify-content: center;
-    gap: defaultUnit(20);
-    flex-wrap: wrap;
-    margin-top: defaultUnit(20);
+		@include mobile {
+			text-align: center;
+		}
+	}
 
-    @include mobile {
-      flex-direction: column;
-    }
-  }
-  &__content {
-    &__item:last-child {
-      p {
-        margin-top: defaultUnit(20);
-      }
-    }
-  }
+	&__content {
+		display: flex;
+		justify-content: center;
+		gap: defaultUnit(20);
+		flex-wrap: wrap;
+		margin-top: defaultUnit(20);
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+	&__content {
+		&__item:last-child {
+			p {
+				margin-top: defaultUnit(20);
+			}
+		}
+	}
 }

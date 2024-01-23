@@ -52,16 +52,17 @@ export function Slider({ images }: Readonly<SliderProps>) {
 
 			<p className="Slider__text">{images[imgIndex].title}</p>
 
-			<button onClick={showNextImg} className="Slider__btn Slider__btn__right">
+			<button role="button" onClick={showNextImg} className="Slider__btn Slider__btn__right">
 				<MdArrowForwardIos />
 			</button>
-			<button onClick={showPrevImg} className="Slider__btn Slider__btn__left">
+			<button role="button" onClick={showPrevImg} className="Slider__btn Slider__btn__left">
 				<MdArrowBackIos />
 			</button>
 			<div className="Slider__dots">
 				{images.map((_, index) => (
 					<button
 						key={index}
+						role="button"
 						onClick={() => setImgIndex(index)}
 						className={`Slider__dots__dot ${index === imgIndex ? 'Slider__dots_dot--active' : ''}`}>
 						<MdOutlineBrightness1 />

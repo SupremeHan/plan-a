@@ -25,7 +25,7 @@ export function ForYouSection() {
 					uslugu selidbe. Bez obzira na vaš budžet, mi vam pružamo konkurentne cene i fleksibilne opcije koje se prilagođavaju vašim
 					potrebama.
 				</p>
-				<button className="ForYouSection__btn">
+				<button role="button" className="ForYouSection__btn">
 					<a href={`tel:+381613931885`}>Pozovite nas</a>
 				</button>
 			</div>

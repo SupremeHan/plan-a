@@ -100,7 +100,7 @@ export function ContactFormSection() {
 						<span>Poruka</span>
 						<textarea onChange={(e) => onChange(e, 'message')} value={contactForm.message} name="message" />
 					</label>
-					<button type="submit" className="ContactForm__btn">
+					<button role="button" type="submit" className="ContactForm__btn">
 						Pošalji
 					</button>
 				</form>

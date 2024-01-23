@@ -11,7 +11,7 @@
 		display: flex;
 		gap: defaultUnit(30);
 
-		@include mobile {
+		@include tablet {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -21,9 +21,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: defaultUnit(30);
-	}
-
-	@include mobile {
-		flex-direction: column;
 	}
 }
